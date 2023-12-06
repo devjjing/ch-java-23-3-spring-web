@@ -1,4 +1,4 @@
-package com.example.chjava23springweb;
+package com.example.chjava23springweb.message;
 
 import org.springframework.web.bind.annotation.*;
 
@@ -13,7 +13,8 @@ public class HelloController {
     }
     @GetMapping("/goodbye")
     public String goodBye() {
-        return "Goodbyey"; }
+        return "Goodbye"; }
+
    @GetMapping("/greeting")
     public String greetSomeOne(@RequestParam(required = false) String name) {
         return "Hello " + name;
