@@ -13,11 +13,13 @@ public class HelloController {
     public String helloWorld() {
         return "Hello, world";
     }
+
     @GetMapping("/goodbye")
     public String goodBye() {
-        return "Goodbye"; }
+        return "Goodbye";
+    }
 
-   @GetMapping("/greeting")
+    @GetMapping("/greeting")
     public String greetSomeOne(@RequestParam(required = false) String name) {
         return "Hello " + name;
     }
