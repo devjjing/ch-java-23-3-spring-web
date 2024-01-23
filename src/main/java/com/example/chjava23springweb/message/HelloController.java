@@ -7,6 +7,8 @@ import java.util.List;
 
 @RestController
 public class HelloController {
+    private final List<String> names = new ArrayList<>();
+
     @GetMapping("/hello")
     public String helloWorld() {
         return "Hello, world";
@@ -26,8 +28,7 @@ public class HelloController {
     }
 
     @PostMapping("/add-something")
-    public String addSomeThing(@RequestBody String name){
-        List<String> names = new ArrayList<>();
+    public String addSomeThing(@RequestBody String name) {
         names.add(name);
         return name;
     }
